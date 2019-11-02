@@ -8,6 +8,7 @@
     "@fortawesome/react-fontawesome": "^0.1.7",
     "node-sass": "^4.13.0",
     "pigeon-maps": "^0.14.0",
+    "pigeon-marker": "^0.3.4",
     "react": "^16.11.0",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.11.0",

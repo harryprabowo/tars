@@ -7,10 +7,11 @@ import {
   Redirect
 } from 'react-router-dom';
 
-import { 
+import {
   Home,
   Cars,
-  Market
+  Market,
+  MapServiceWorker,
 } from './containers';
 import Navbar from './components/Navbar';
 
@@ -28,18 +29,18 @@ const App = () => {
     {
       path: "/home",
       name: "Home",
-      icon: <FontAwesomeIcon size="lg" icon={faHome}/>
+      icon: <FontAwesomeIcon size="lg" icon={faHome} />
     },
     {
       path: "/cars",
       name: "Cars",
-      icon: <FontAwesomeIcon size="lg" icon={faCar}/>
+      icon: <FontAwesomeIcon size="lg" icon={faCar} />
     },
     {
       path: "/market",
       name: "Market",
       icon: <FontAwesomeIcon size="lg" icon={faShoppingCart} />
-    }
+    },
   ]
 
   return (
@@ -55,7 +56,10 @@ const App = () => {
           <Route path="/market" component={withRouter(props => (
             <Market {...props} />
           ))} />
-          <Redirect exact path="/" to="/home"/>
+          <Route path="/map" component={withRouter(props => (
+            <MapServiceWorker {...props} />
+          ))} />
+          <Redirect exact path="/" to="/home" />
         </Switch>
       </main>
 

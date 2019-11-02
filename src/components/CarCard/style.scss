@@ -1,19 +1,48 @@
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: greenyellow;
+}
+
 .card {
     background-color: black;
     opacity: 0.8;
     border-radius: 10px;
 
-    margin: 28px 4px 0px 28px; 
-    width: 280px;
-    height: 200px;
+    margin: 28px 40px 0px 28px;
+}
+
+.car-name {
+    font-weight: bold;
+}
+
+.car-score {
+    font-size: 0.8em;
+}
+
+.trip-history {
+    font-size: 0.8em;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+
+    width: calc(100% - 30px);
+    margin-left: 15px;
+    margin-bottom: 4px;
 }
 
 .description {
+    padding: 12px;
     color: white;
     text-align: left;
 }
 
-img {
+.card .row .col-4 img {
     object-fit: cover;
     width: 80px;
     height: 80px;
