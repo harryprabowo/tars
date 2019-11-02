@@ -9,16 +9,14 @@
         }
     }
 
-    .has-button {
-        writing-mode: vertical-rl;
-    }
-
     .card {
         overflow: auto;
         white-space: nowrap;
         align-items: flex-start;
         flex-direction: row;
         padding-top: 12px;
+
+        background-color: transparent;
 
         .detail-card {
             display: inline-block;
@@ -42,3 +40,7 @@ label {
     font-weight:bolder;
     margin-right: 1em;
 }
+
+.has-button {
+        writing-mode: vertical-rl;
+    }

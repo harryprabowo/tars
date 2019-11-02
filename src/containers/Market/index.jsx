@@ -1,6 +1,19 @@
 import React, { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { 
+    Container, 
+    Row, 
+    Col,
+    Image,
+    Button,
+    Badge 
+} from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./style.scss";
+import Logo from '../../assets/img/toyota.png'
+import {
+    faBell,
+  faChevronCircleDown
+} from '@fortawesome/free-solid-svg-icons';
 
 const itemsDummy = [
   {
@@ -34,6 +47,7 @@ const Market = props => {
         <Col className="market-items">
           <img src={items[i].picture_url} alt={items[i].name} />
           <div className="item-name">{items[i].name}</div>
+          <label>IDR 99,999</label>
         </Col>
         {i + 1 in items ? (
           <Col className="market-items">
@@ -48,12 +62,39 @@ const Market = props => {
   }
 
   return (
-    <>
-      <input type="text" />
-      <Container fluid className="market">
+    <div id="Market">
+      {/* HEADER STARTS HERE */}
+      <Row className="topbar">
+        <Col xs={3}>
+          <Image src={Logo} fluid />
+        </Col>
+        <Col xs={7} style={{ alignSelf: 'center' }}>
+          {/* <Button size="sm" variant="dark">
+                        <Badge variant="info" style={{ verticalAlign: "sub"}}>9,999</Badge>
+                        <span className="sr-only">unread messages</span>
+                    </Button> */}
+          <label style={{ marginRight: 0 }}>
+            <Badge variant="dark" style={{ fontSize: '12pt', marginRight: '1em' }}>B 1 RI</Badge>
+            <br />
+            <span style={{ marginRight: '1em', fontWeight: 100, color: 'rgba(255,255,255,0.8)' }}>TOYOTA SUPRA</span>
+          </label>
+          <FontAwesomeIcon icon={faChevronCircleDown} style={{ opacity: '0.3', verticalAlign: 'super' }} />
+        </Col>
+        <Col xs={2} className="has-button">
+          <Button variant="link">
+            <FontAwesomeIcon size="2x" icon={faBell} style={{ color: 'white' }} />
+          </Button>
+        </Col>
+      </Row>
+      {/* HEADER ENDS HERE */}
+
+      <input type="text" style={{margin: 0, width: '90%', backgroundColor: 'white'}} placeholder="Search marketplace"/>
+      <Container fluid className="market" >
+        <br/>
+        <label style={{fontSize: '12pt'}}>RECOMMENDED FOR YOU</label>
         {itemsGrid}
       </Container>
-    </>
+    </div>
   );
 };
 

@@ -10,26 +10,24 @@
     color: greenyellow;
 }
 
-.card {
-    background-color: black;
-    opacity: 0.8;
-    border-radius: 10px;
-
-    margin: 28px 40px 0px 28px;
-}
-
 .car-name {
     font-weight: bold;
+    font-size: 16pt;
 }
 
 .car-score {
     font-size: 0.8em;
 }
 
+.car-detail {
+    background-color: #fff;
+    color: black;
+}
+
 .trip-history {
     font-size: 0.8em;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1em;
 
     width: calc(100% - 30px);
     margin-left: 15px;
@@ -37,8 +35,8 @@
 }
 
 .description {
-    padding: 12px;
-    color: white;
+    // background-color: rgb(216, 216, 216);
+    padding: 1em 2em;
     text-align: left;
 }
 
@@ -46,46 +44,47 @@
     object-fit: cover;
     width: 80px;
     height: 80px;
-    border-radius: 8px;
+    // border-radius: 8px;
     margin: 8px;
 }
 
 .lock {
     z-index: 999999;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 50px;
     border-radius: 30px;
     border: 0px;
+    transition: 0.2s;
+    background-color: transparent;
 
     &:focus {
         outline: none;
     }
 
     svg {
-        color: white;
+        // color: white;
         float: none;
         margin: 20%;
+        transition: 0.2s;
     }
 
-    position: absolute;
+    // position: absolute;
     top: 15px;
-    right: -30px;
+    // right: 1em;
 }
 
 .locked {
-    background-color: red;
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px orange, 0 0 40px orange;
+    border: 3px solid red;
 
     &:active {
-        background-color: #bb0000;
+        border-color: #bb0000;
     }
 }
 
 .unlocked {
-    background-color: greenyellow;
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px yellow, 0 0 40px yellow;
+    border: 3px solid rgb(100, 154, 20);
 
     &:active {
-        background-color: #aadd00;
+        border-color: #6c841e;
     }
 }

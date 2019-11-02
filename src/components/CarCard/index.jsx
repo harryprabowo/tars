@@ -1,10 +1,16 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { 
+    Row,
+    Col,
+    Image,
+    Badge
+} from 'react-bootstrap';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faLock,
-    faUnlock
+    faUnlock,
+    faLongArrowAltRight
 } from '@fortawesome/free-solid-svg-icons';
 
 import './style.scss';
@@ -23,33 +29,59 @@ const CarCard = props => {
     return (
         <div className="card">
             <Row>
-                <Col xs={4}>
-                    <img src={pictureUrl} alt='Car preview' />
+                <Col>
+                    <Image src={pictureUrl} alt='Car preview' style={{width:'100%'}}/>
                 </Col>
-                <Col className="description" xs={8}>
-                    <div className="car-name">{name}</div>
-                    <div className={`car-score`}>Overall score: {<span className={scoreColor(overallScore)}>{overallScore}</span>}/100</div>
-                </Col>
-                <button className={`lock ${locked ? 'locked' : 'unlocked'}`} onClick={() => toggleLock(id)}>
-                    <FontAwesomeIcon size="2x" icon={locked ? faLock : faUnlock} />
-                </button>
-                {history.map(history =>
-                    <div className="trip-history">
-                        <Row>
-                            <Col>{history.datetime}</Col>
-                            <Col>{history.occassion}</Col>
-                        </Row>
-                        <Row>
-                            <Col>{history.from}</Col>
-                            <Col>{history.to}</Col>
-                        </Row>
-                        <Row>
-                            <Col>{history.distance}</Col>
-                            <Col>{history.fuel}</Col>
-                        </Row>
-                    </div>
-                )}
             </Row>
+
+            <div className="car-detail">
+                <Row>
+                    <Col className="description">
+                        <Row>
+                            <Col xs={9}>
+                                <div className="car-name">
+                                    {name}
+                                    <Badge variant="success" style={{ margin: '0 1em' }}>{overallScore}/100</Badge>
+                                </div>
+                                <div>B123123123/XVII/2019/1203</div>
+                                <label>Distance driven: 12345 KM</label>
+                            </Col>
+                            <Col xs={3}>
+                                <button className={`lock ${locked ? 'locked' : 'unlocked'}`} onClick={() => toggleLock(id)}>
+                                    <FontAwesomeIcon size="lg" icon={locked ? faLock : faUnlock} />
+                                </button>
+                            </Col>
+                        </Row>
+
+                    </Col>
+                </Row>
+
+                <Row>
+                    <Col style={{ textAlign: 'left', marginLeft: '1em', opacity: '0.7' }}>
+                        <label>TRIP HISTORY</label>
+                    </Col>
+
+                    {history.map(history =>
+                        <div className="trip-history">
+                            <Row>
+                                <Col>{history.datetime}</Col>
+                                <Col><label>{history.occassion.toUpperCase()}</label></Col>
+                            </Row>
+                            <Row>
+                                <Col>{history.from}</Col>
+                                <Col xs={1}>
+                                    <FontAwesomeIcon icon={faLongArrowAltRight} />
+                                </Col>
+                                <Col>{history.to}</Col>
+                            </Row>
+                            <Row>
+                                <Col>{history.distance}</Col>
+                                <Col>{history.fuel}</Col>
+                            </Row>
+                        </div>
+                    )}
+                </Row>
+            </div>
         </div>
     )
 }
