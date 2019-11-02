@@ -1,0 +1,49 @@
+$sidebar-width: 15em;
+$active-button-color: rgba(0, 0, 0, 0.300);
+
+#Sidebar {
+    position: fixed;
+    background-color: rgb(11, 83, 110);
+    width: $sidebar-width;
+    height: 100vh;
+    z-index: 9999;
+
+    & ul {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.sidebar-logo {
+    img {
+        width: $sidebar-width;
+    }
+}
+
+.sidebar-button {
+    & a {
+        color: white;    
+        margin: 1em 0;
+        text-align: center;
+
+        &.active {
+            & i {
+                background-color: $active-button-color;
+
+                &:hover {
+                    background-color: $active-button-color;
+                }
+            }
+        }
+
+        & i {
+            padding: 15px 0;
+            width: 100%;
+            transition: 0.2s;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.100);
+            }
+        }
+    }
+}
