@@ -93,6 +93,28 @@ const Home = props => {
                     </CircularGaugeComponent>
                 </Col>
             </Row>
+            <br/>
+            <Row>
+                <Col style={{ textAlign: 'left' }}>
+                    asdasd
+                </Col>
+                <Col style={{ textAlign: 'right' }}>
+                    asdasd
+                </Col>
+            </Row>
+            <br/>
+            <section class="card">
+                <div class="card--content"></div>
+                <div class="card--content"></div>
+                <div class="card--content"></div>
+                <div class="card--content"></div>
+                <div class="card--content"></div>
+                <div class="card--content"></div>
+                <div class="card--content"></div>
+                <div class="card--content"></div>
+                <div class="card--content"></div>
+                <div class="card--content"></div>
+            </section>
         </div>
     )
 }
