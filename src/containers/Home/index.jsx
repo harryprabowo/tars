@@ -1,38 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
+import { Row, Col, Image, Button, Toast, Badge } from "react-bootstrap";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBell, faChevronCircleDown } from "@fortawesome/free-solid-svg-icons";
 import {
-    Row,
-    Col,
-    Image,
-    Button,
-    Toast,
-    Badge
-} from 'react-bootstrap'
+  CircularGaugeComponent,
+  AxesDirective,
+  AxisDirective,
+  PointersDirective,
+  PointerDirective
+} from "@syncfusion/ej2-react-circulargauge";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faBell,
-    faChevronCircleDown
-} from '@fortawesome/free-solid-svg-icons';
-import { 
-    CircularGaugeComponent,
-    AxesDirective,
-    AxisDirective,
-    PointersDirective,
-    PointerDirective,
-} from '@syncfusion/ej2-react-circulargauge';
+import Logo from "../../assets/img/toyota.png";
 
-import Logo from '../../assets/img/toyota.png'
-
-import './style.scss'
+import "./style.scss";
 // import "../node_modules/@syncfusion/ej2-react-buttons/styles/material.css";
 
 const Home = props => {
-    const [showToast, setShowToast] = useState(false);
+  const [showToast, setShowToast] = useState(false);
 
-    const toggleShowToast = () => {
-        setShowToast(false);
-    }
+  const toggleShowToast = () => {
+    setShowToast(false);
+  };
 
     return (
         <div id="Home">
@@ -46,96 +36,137 @@ const Home = props => {
                         <Badge variant="info" style={{ verticalAlign: "sub"}}>9,999</Badge>
                         <span className="sr-only">unread messages</span>
                     </Button> */}
-                    <label style={{marginRight: 0}}>
-                        <Badge variant="dark" style={{ fontSize: '12pt', marginRight: '1em'}}>B 1 RI</Badge>
-                        <br/>
-                        <span style={{marginRight: '1em', fontWeight: 100, color: 'rgba(255,255,255,0.8)'}}>TOYOTA SUPRA</span>
-                    </label>
-                    <FontAwesomeIcon icon={faChevronCircleDown} style={{ opacity: '0.3', verticalAlign: 'super'}}/>
-                </Col>
-                <Col xs={2} className="has-button">
-                    <Button variant="link">
-                        <FontAwesomeIcon size="2x" icon={faBell} style={{color: 'white'}} />
-                    </Button>
-                </Col>
-            </Row>
-            {/* HEADER ENDS HERE */}
+          <label style={{ marginRight: 0 }}>
+            <Badge
+              variant="dark"
+              style={{ fontSize: "12pt", marginRight: "1em" }}
+            >
+              B 1 RI
+            </Badge>
+            <br />
+            <span
+              style={{
+                marginRight: "1em",
+                fontWeight: 100,
+                color: "rgba(255,255,255,0.8)"
+              }}
+            >
+              TOYOTA SUPRA
+            </span>
+          </label>
+          <FontAwesomeIcon
+            icon={faChevronCircleDown}
+            style={{ opacity: "0.3", verticalAlign: "super" }}
+          />
+        </Col>
+        <Col xs={2} className="has-button">
+          <Button variant="link">
+            <FontAwesomeIcon
+              size="2x"
+              icon={faBell}
+              style={{ color: "white" }}
+            />
+          </Button>
+        </Col>
+      </Row>
+      {/* HEADER ENDS HERE */}
 
-            <Row>
-                <Col>
-                    <Toast show={showToast} onClose={toggleShowToast} style={{ display: showToast ? 'block' : 'none' }}>
-                        <Toast.Header>
-                            <span className="mr-auto">Bootstrap</span>
-                            {/* <small>11 mins ago</small> */}
-                        </Toast.Header>
-                    </Toast>
-                </Col>
-            </Row>
-            
-            <Row style={{padding: '1em 0'}}>
-                <Col style={{ padding: 0 }}>
-                    <CircularGaugeComponent 
-                        id='circulargauge-1'
-                        title='FUEL & TEMP.'
-                        height='200'
-                    >
-                        <AxesDirective>
-                            <AxisDirective>
-                                <PointersDirective>
-                                    <PointerDirective value={35}></PointerDirective>
-                                </PointersDirective>
-                            </AxisDirective>
-                        </AxesDirective>
-                    </CircularGaugeComponent>
-                </Col>
-                <Col style={{ padding: 0 }}>
-                    <CircularGaugeComponent
-                        id='circulargauge-2'
-                        title='KM UNTIL SERVICE'
-                        height='200'
-                    >
-                        <AxesDirective>
-                            <AxisDirective>
-                                <PointersDirective>
-                                    <PointerDirective value={35}></PointerDirective>
-                                </PointersDirective>
-                            </AxisDirective>
-                        </AxesDirective>
-                    </CircularGaugeComponent>
-                </Col>
-            </Row>
-            <Row style={{margin: '0.5em 0'}}>
-                <Col style={{ textAlign: 'left' }}>
-                    <label>CAR DETAIL</label>
-                </Col>
-                <Col style={{ textAlign: 'right' }}>
-                    <Button size="sm" variant="link" style={{marginBOttom: '8px'}}>View more</Button>
-                </Col>
-            </Row>
+      <Row>
+        <Col>
+          <Toast
+            show={showToast}
+            onClose={toggleShowToast}
+            style={{ display: showToast ? "block" : "none" }}
+          >
+            <Toast.Header>
+              <span className="mr-auto">Bootstrap</span>
+              {/* <small>11 mins ago</small> */}
+            </Toast.Header>
+          </Toast>
+        </Col>
+      </Row>
 
-            <section class="card">
-                <div class="card--content"></div>
-                <div class="card--content"></div>
-                <div class="card--content"></div>
-                <div class="card--content"></div>
-                <div class="card--content"></div>
-                <div class="card--content"></div>
-                <div class="card--content"></div>
-                <div class="card--content"></div>
-                <div class="card--content"></div>
-                <div class="card--content"></div>
-            </section>
+      <Row style={{ padding: "1em 0" }}>
+        <Col style={{ padding: 0 }}>
+          <CircularGaugeComponent
+            id="circulargauge-1"
+            title="FUEL & TEMP."
+            height="200"
+          >
+            <AxesDirective>
+              <AxisDirective>
+                <PointersDirective>
+                  <PointerDirective value={35}></PointerDirective>
+                </PointersDirective>
+              </AxisDirective>
+            </AxesDirective>
+          </CircularGaugeComponent>
+        </Col>
+        <Col style={{ padding: 0 }}>
+          <CircularGaugeComponent
+            id="circulargauge-2"
+            title="KM UNTIL SERVICE"
+            height="200"
+          >
+            <AxesDirective>
+              <AxisDirective>
+                <PointersDirective>
+                  <PointerDirective value={35}></PointerDirective>
+                </PointersDirective>
+              </AxisDirective>
+            </AxesDirective>
+          </CircularGaugeComponent>
+        </Col>
+      </Row>
+      <Row style={{ margin: "0.5em 0" }}>
+        <Col style={{ textAlign: "left" }}>
+          <label>CAR DETAIL</label>
+        </Col>
+        <Col style={{ textAlign: "right" }}>
+          <Button size="sm" variant="link" style={{ marginBOttom: "8px" }}>
+            View more
+          </Button>
+        </Col>
+      </Row>
 
-            <Row style={{ margin: '2em 0', color: "grey" }}>
-                <Col>
-                    <Button variant="dark" block>ASdasd</Button>
-                </Col>
-                <Col>
-                    <Button variant="dark" block>ASdasd</Button>
-                </Col>
-            </Row>
-        </div>
-    )
-}
+      <section class="card">
+        <div class="card--content"></div>
+        <div class="card--content"></div>
+        <div class="card--content"></div>
+        <div class="card--content"></div>
+        <div class="card--content"></div>
+        <div class="card--content"></div>
+        <div class="card--content"></div>
+        <div class="card--content"></div>
+        <div class="card--content"></div>
+        <div class="card--content"></div>
+      </section>
 
-export default Home
+      <Row style={{ margin: "2em 0", color: "grey" }}>
+        <Col>
+          <Button variant="dark" block>
+            <a
+              style={{ color: "inherit" }}
+              href="tel:1500898"
+            >
+              Call Toyota
+            </a>
+          </Button>
+        </Col>
+        <Col>
+          <Button variant="dark" block>
+            <a
+              style={{ color: "inherit" }}
+              href="https://auto2000.co.id/booking/booking_service"
+              target="_blank"
+            >
+              Booking Service
+            </a>
+          </Button>
+        </Col>
+      </Row>
+    </div>
+  );
+};
+
+export default Home;
