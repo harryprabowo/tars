@@ -13,7 +13,7 @@ const Navbar = props => {
         <div className="navbar">
             {
                 links.map((link, key) => (
-                    <NavLink exact to={link.path} activeClassName="active">
+                    <NavLink key={key} exact to={link.path} activeClassName="active">
                         <div className="navbar-button">{link.icon}</div>
                     </NavLink>
                 ))
