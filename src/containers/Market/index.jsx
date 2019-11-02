@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = props => {
+const Market = props => {
     return (
         <>
         
@@ -8,4 +8,4 @@ const Home = props => {
     )
 }
 
-export default Home
+export default Market

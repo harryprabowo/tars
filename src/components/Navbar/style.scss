@@ -1,0 +1,36 @@
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+    padding: 0 20%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    .navbar-button {
+        height: 3.5em;
+        padding: 0 1em;
+        padding-top: 1em;
+        margin-bottom: 5px;
+        transition: 0.15s;
+
+        svg {
+            opacity: 0.5;
+            transition: 0.15s;
+        }
+    }
+
+    a {
+        color: white;
+        cursor: pointer;
+
+        &.active {
+            .navbar-button {
+                border-bottom: 2px solid white;
+
+                svg {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

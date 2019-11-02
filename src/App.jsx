@@ -4,39 +4,62 @@ import {
   Switch,
   Route,
   withRouter,
+  Redirect
 } from 'react-router-dom';
 
-import { Home } from './containers';
-import Sidebar from './components/Sidebar';
-import Footer from './components/Footer';
+import { 
+  Home,
+  Cars,
+  Market
+} from './containers';
+import Navbar from './components/Navbar';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHome,
-  faCog
+  faCar,
+  faShoppingCart,
 } from '@fortawesome/free-solid-svg-icons';
 
 import './App.scss'
 
 const App = () => {
   const links = [
-    <a href="/"><FontAwesomeIcon icon={faHome} /> Home</a>,
-    <a href="/settings"><FontAwesomeIcon icon={faCog} /> Settings</a>,
+    {
+      path: "/home",
+      name: "Home",
+      icon: <FontAwesomeIcon size="lg" icon={faHome}/>
+    },
+    {
+      path: "/cars",
+      name: "Cars",
+      icon: <FontAwesomeIcon size="lg" icon={faCar}/>
+    },
+    {
+      path: "/market",
+      name: "Market",
+      icon: <FontAwesomeIcon size="lg" icon={faShoppingCart} />
+    }
   ]
 
   return (
     <Router>
-      <Sidebar links={links} />
-      <main>
+      <main id="App">
         <Switch>
           <Route path="/home" component={withRouter(props => (
             <Home {...props} />
           ))} />
+          <Route path="/cars" component={withRouter(props => (
+            <Cars {...props} />
+          ))} />
+          <Route path="/market" component={withRouter(props => (
+            <Market {...props} />
+          ))} />
+          <Redirect exact path="/" to="/home"/>
         </Switch>
       </main>
-      <Footer>
-        Hahaha
-      </Footer>
+
+      <Navbar links={links} />
     </Router>
   )
 }
