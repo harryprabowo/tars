@@ -73,12 +73,12 @@ const Cars = () => {
     }
 
     return (
-        <>
+        <div id="Cars">
             <Map center={[-6.2088, 106.8267]} zoom={12} height={240} />
-            <div className='scroll-wrapper'>
+            <div className='scroll-wrapper horizontal-cardlist'>
                 {cars.map(car => <CarCard {...car} toggleLock={toggleLock} />)}
             </div>
-        </>
+        </div>
     )
 }
 

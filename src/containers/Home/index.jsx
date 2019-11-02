@@ -12,6 +12,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faBell,
+    faChevronCircleDown
 } from '@fortawesome/free-solid-svg-icons';
 import { 
     CircularGaugeComponent,
@@ -40,13 +41,19 @@ const Home = props => {
                 <Col xs={3}>
                     <Image src={Logo} fluid />
                 </Col>
-                <Col xs={6} style={{alignSelf: 'center'}}>
-                    <Button size="sm" variant="dark">
+                <Col xs={7} style={{alignSelf: 'center'}}>
+                    {/* <Button size="sm" variant="dark">
                         <Badge variant="info" style={{ verticalAlign: "sub"}}>9,999</Badge>
                         <span className="sr-only">unread messages</span>
-                    </Button>
+                    </Button> */}
+                    <label style={{marginRight: 0}}>
+                        <Badge variant="dark" style={{ fontSize: '12pt', marginRight: '1em'}}>B 1 RI</Badge>
+                        <br/>
+                        <span style={{marginRight: '1em', fontWeight: 100, color: 'rgba(255,255,255,0.8)'}}>TOYOTA SUPRA</span>
+                    </label>
+                    <FontAwesomeIcon icon={faChevronCircleDown} style={{ opacity: '0.3', verticalAlign: 'super'}}/>
                 </Col>
-                <Col xs={3} className="has-button">
+                <Col xs={2} className="has-button">
                     <Button variant="link">
                         <FontAwesomeIcon size="2x" icon={faBell} style={{color: 'white'}} />
                     </Button>
