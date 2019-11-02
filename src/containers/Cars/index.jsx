@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import Map from 'pigeon-maps';
+// import Map from 'pigeon-maps';
 
 import {
     Row,
     Col,
     Image,
     Button,
-    Toast,
     Badge
 } from 'react-bootstrap'
 

@@ -5,7 +5,6 @@ import {
     Col,
     Image,
     Button,
-    Toast,
     Badge 
 } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
