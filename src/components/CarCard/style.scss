@@ -1,0 +1,62 @@
+.card {
+    background-color: black;
+    opacity: 0.8;
+    border-radius: 10px;
+
+    margin: 28px 4px 0px 28px; 
+    width: 280px;
+    height: 200px;
+}
+
+.description {
+    color: white;
+    text-align: left;
+}
+
+img {
+    object-fit: cover;
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    margin: 8px;
+}
+
+.lock {
+    z-index: 999999;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: 0px;
+
+    &:focus {
+        outline: none;
+    }
+
+    svg {
+        color: white;
+        float: none;
+        margin: 20%;
+    }
+
+    position: absolute;
+    top: 15px;
+    right: -30px;
+}
+
+.locked {
+    background-color: red;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px orange, 0 0 40px orange;
+
+    &:active {
+        background-color: #bb0000;
+    }
+}
+
+.unlocked {
+    background-color: greenyellow;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px yellow, 0 0 40px yellow;
+
+    &:active {
+        background-color: #aadd00;
+    }
+}
