@@ -1,10 +1,18 @@
 .scroll-wrapper {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    padding-right: 20px;
-  
-    .card {
-      display: inline-block;
-    }
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-right: 20px;
+
+  .card {
+    display: inline-block;
   }
+}
+
+#Cars {
+  min-height: 100vh;
+  
+  .horizontal-cardlist {
+    height: 100%;
+  }
+}

@@ -12,10 +12,12 @@
 
 .card {
     background-color: black;
-    opacity: 0.8;
-    border-radius: 10px;
-
-    margin: 28px 40px 0px 28px;
+    width: 90%;
+    // opacity: 0.8;
+    // border-radius: 10px;
+    padding: 1em;
+    margin: 1em 5%;
+    // margin: 28px 40px 0px 28px;
 }
 
 .car-name {
@@ -74,7 +76,6 @@
 
 .locked {
     background-color: red;
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px orange, 0 0 40px orange;
 
     &:active {
         background-color: #bb0000;
@@ -83,7 +84,6 @@
 
 .unlocked {
     background-color: greenyellow;
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px yellow, 0 0 40px yellow;
 
     &:active {
         background-color: #aadd00;
