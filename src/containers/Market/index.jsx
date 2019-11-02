@@ -1,6 +1,19 @@
 import React, { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { 
+    Container, 
+    Row, 
+    Col,
+    Image,
+    Button,
+    Toast,
+    Badge 
+} from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./style.scss";
+import Logo from '../../assets/img/toyota.png'
+import {
+    faBell,
+} from '@fortawesome/free-solid-svg-icons';
 
 const itemsDummy = [
   {
@@ -48,12 +61,36 @@ const Market = props => {
   }
 
   return (
-    <>
+    <div id="Market">
+      {/* HEADER STARTS HERE */}
+      <Row className="topbar">
+        <Col xs={3}>
+          <Image src={Logo} fluid />
+        </Col>
+        <Col xs={6} style={{ alignSelf: "center" }}>
+          <Button size="sm" variant="dark">
+            <Badge variant="info" style={{ verticalAlign: "sub" }}>
+              9,999
+            </Badge>
+            <span className="sr-only">unread messages</span>
+          </Button>
+        </Col>
+        <Col xs={3} className="has-button">
+          <Button variant="link">
+            <FontAwesomeIcon
+              size="2x"
+              icon={faBell}
+              style={{ color: "white" }}
+            />
+          </Button>
+        </Col>
+      </Row>
+      {/* HEADER ENDS HERE */}
       <input type="text" />
       <Container fluid className="market">
         {itemsGrid}
       </Container>
-    </>
+    </div>
   );
 };
 
