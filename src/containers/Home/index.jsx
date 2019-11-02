@@ -37,7 +37,7 @@ const Home = props => {
     return (
         <div id="Home">
             {/* HEADER STARTS HERE */}
-            <Row className="topbar">
+            <Row>
                 <Col xs={3}>
                     <Image src={Logo} fluid />
                 </Col>

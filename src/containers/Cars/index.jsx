@@ -46,39 +46,6 @@ const carsDummy = [
             }
         ],
     },
-    {
-        id: 2,
-        name: 'Toyota Avanza',
-        pictureUrl: 'https://images.summitmedia-digital.com/topgear/images/2019/05/14/2019-toyota-avanza-main-temp-1557805092.jpg',
-        locked: false,
-        overallScore: 54,
-        history: [
-            {
-                from: 'Candi Bentar Hall',
-                to: 'Pancoran Riverside Apartment',
-                distance: '7.6 km',
-                datetime: '2 November 2019, 19.40 - 20.28',
-                fuel: '23.8 L/km',
-                occassion: 'Car Sharing',
-            },
-            {
-                from: 'Pancoran Riverside Apartment',
-                to: 'Candi Bentar Hall',
-                distance: '7.5 km',
-                datetime: '2 November 2019, 18.01 - 18.54',
-                fuel: '28.5 L/km',
-                occassion: 'Car Sharing',
-            },
-            {
-                from: 'Tokopedia Tower',
-                to: 'Pancoran Riverside Apartment',
-                distance: '11.0 km',
-                datetime: '2 November 2019, 16.01 - 16.52',
-                fuel: '22.5 L/km',
-                occassion: 'Personal',
-            }
-        ],
-    }
 ]
 
 const Cars = () => {

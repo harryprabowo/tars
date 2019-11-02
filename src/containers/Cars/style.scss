@@ -1,11 +1,7 @@
 .scroll-wrapper {
-  overflow-x: scroll;
-  overflow-y: hidden;
+  // overflow-x: scroll;
+  overflow-y: scroll;
   white-space: nowrap;
-
-  .card {
-    display: inline-block;
-  }
 }
 
 #Cars {
@@ -16,7 +12,7 @@
   }
 
   .topbar {
-    padding: 2em;
+    padding: 1em;
   }
 
   .card {
@@ -25,7 +21,7 @@
     // height: 92vh;
     // opacity: 0.8;
     border-radius: 0;
-    padding: 1em;
+    // padding: 1em;
     // margin: 28px 40px 0px 28px;
   }
 }
