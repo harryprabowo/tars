@@ -4,21 +4,11 @@ import {
   Switch,
   Route,
   withRouter,
-  NavLink
 } from 'react-router-dom';
 
-import {
-  Row,
-  Col,
-} from 'react-bootstrap';
-
-import {
-  Home,
-} from './containers';
-
-import { 
-  Sidebar,
-} from './components';
+import { Home } from './containers';
+import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -30,25 +20,13 @@ import './App.scss'
 
 const App = () => {
   const links = [
-    new Sidebar.ButtonPrototype("home", "Home", <FontAwesomeIcon icon={faHome} />),
-    new Sidebar.ButtonPrototype("settings", "Settings", <FontAwesomeIcon icon={faCog} />),
+    <a href="/"><FontAwesomeIcon icon={faHome} /> Home</a>,
+    <a href="/settings"><FontAwesomeIcon icon={faCog} /> Settings</a>,
   ]
 
   return (
     <Router>
-      <Sidebar.Container>
-        {
-          links.map((link, index) => (
-            <NavLink exact activeClassName='active' to={link.link}>
-              <Sidebar.Button key={index + 1}>
-                <span>{link.icon}</span>
-                <span>{link.name}</span>
-              </Sidebar.Button>
-            </NavLink>
-          ))
-        }
-      </Sidebar.Container>
-
+      <Sidebar links={links} />
       <main>
         <Switch>
           <Route path="/home" component={withRouter(props => (
@@ -56,6 +34,9 @@ const App = () => {
           ))} />
         </Switch>
       </main>
+      <Footer>
+        Hahaha
+      </Footer>
     </Router>
   )
 }
