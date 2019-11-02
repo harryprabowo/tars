@@ -12,7 +12,6 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faBell,
-    faAngleRight
 } from '@fortawesome/free-solid-svg-icons';
 import { 
     CircularGaugeComponent,
@@ -66,11 +65,11 @@ const Home = props => {
                 </Col>
             </Row>
             
-            <Row style={{margin: '0.5em 0', padding: '0.75em 0'}}>
+            <Row style={{padding: '1em 0'}}>
                 <Col style={{ padding: 0 }}>
                     <CircularGaugeComponent 
                         id='circulargauge-1'
-                        title='Fuel & Temperature'
+                        title='FUEL & TEMP.'
                         height='200'
                     >
                         <AxesDirective>
@@ -85,7 +84,7 @@ const Home = props => {
                 <Col style={{ padding: 0 }}>
                     <CircularGaugeComponent
                         id='circulargauge-2'
-                        title='Distance to Next Service'
+                        title='KM UNTIL SERVICE'
                         height='200'
                     >
                         <AxesDirective>
@@ -103,7 +102,7 @@ const Home = props => {
                     <label>CAR DETAIL</label>
                 </Col>
                 <Col style={{ textAlign: 'right' }}>
-                    <Button variant="link" style={{padding: 0}}>View more</Button>
+                    <Button size="sm" variant="link" style={{marginBOttom: '8px'}}>View more</Button>
                 </Col>
             </Row>
 
