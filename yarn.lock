@@ -1243,6 +1243,65 @@
     "@svgr/plugin-svgo" "^4.3.1"
     loader-utils "^1.2.3"
 
+"@syncfusion/ej2-base@~17.3.19":
+  version "17.3.19"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-base/-/ej2-base-17.3.19.tgz#e95e2e06403b3754c18dd1ab3481a65d14431493"
+  integrity sha512-YGTDzPuKaEqCVvsdnBdrXSucnAnYKOZ88HSDNkboR6Wuol+H+83oYE4BsfHfNFdqWDgWGm3wvx9EvLE3/l4/bA==
+  dependencies:
+    "@syncfusion/ej2-icons" "~17.3.19"
+
+"@syncfusion/ej2-buttons@~17.3.19":
+  version "17.3.19"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-buttons/-/ej2-buttons-17.3.19.tgz#124907256608479dace9c528a87fefb1f83bfb02"
+  integrity sha512-0WRd7QFKsSp6gVxtUhdTesqd4G/cCfRhGoixgOm1I7s+DW07N6lerCyeuysNxpnDQrUL2Jo6EJgbJ7WS8eQihA==
+  dependencies:
+    "@syncfusion/ej2-base" "~17.3.19"
+
+"@syncfusion/ej2-circulargauge@17.3.19":
+  version "17.3.19"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-circulargauge/-/ej2-circulargauge-17.3.19.tgz#02a7a434fe693eb3be89b36282c97fe80b9cda52"
+  integrity sha512-AWKBk78ttCOLQ0nvx4ogwD9KF+3kBz5tRHhqTpyw21+PwML2f/M/vcnco5vHiGjJYgkP0SfGPw9RbuV/9xfFmg==
+  dependencies:
+    "@syncfusion/ej2-base" "~17.3.19"
+    "@syncfusion/ej2-popups" "~17.3.19"
+    "@syncfusion/ej2-svg-base" "~17.3.19"
+
+"@syncfusion/ej2-icons@~17.3.19":
+  version "17.3.19"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-icons/-/ej2-icons-17.3.19.tgz#977371ad85dbcf9448bd88dd1ec04b6dfb72a50f"
+  integrity sha512-te8g7Bpfgp+GeU1r3rImJOxS4Mgjk9wSUs0jDigZLwWn1TMHz+nSHhQBxDrRdtNPa7WT2ojxUBBDGnb1qia5sw==
+
+"@syncfusion/ej2-popups@~17.3.19":
+  version "17.3.19"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-popups/-/ej2-popups-17.3.19.tgz#6bb57b23740578fdfcc3635750c6308e74f5bf54"
+  integrity sha512-vjZJJ5cXBpXwgfPB9DQPcTXrbcGHARGYTGHHLIOFgVLCc/FtYmpAllYiMrWVnywGMEIrXcFlmOB7UTSdiXwEqw==
+  dependencies:
+    "@syncfusion/ej2-base" "~17.3.19"
+    "@syncfusion/ej2-buttons" "~17.3.19"
+
+"@syncfusion/ej2-react-base@~17.3.19":
+  version "17.3.19"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-react-base/-/ej2-react-base-17.3.19.tgz#87c17e8a21b27fc1a0005296c6eeaf099c4a0f8f"
+  integrity sha512-6NZBZW/bevtXn0jR2fooJYvNsj3MlVl2j3wp9sIzjuccDldWSNnbAa52okTOT5ckiDp3CrwCMSKvFDf21E+ixg==
+  dependencies:
+    "@syncfusion/ej2-base" "~17.3.19"
+
+"@syncfusion/ej2-react-circulargauge@^17.3.19":
+  version "17.3.19"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-react-circulargauge/-/ej2-react-circulargauge-17.3.19.tgz#423df7ab275fa8fa271f7af12bbf00fd658ca909"
+  integrity sha512-E+AvmhTru7AG8QejQdTeNNrWwHuPeM/p3mFhmq1pka/RIHUVKgwr/FjgKQUD+OLrFR7TYPqEBaNIovdYtRIo3w==
+  dependencies:
+    "@syncfusion/ej2-base" "~17.3.19"
+    "@syncfusion/ej2-circulargauge" "17.3.19"
+    "@syncfusion/ej2-react-base" "~17.3.19"
+
+"@syncfusion/ej2-svg-base@~17.3.19":
+  version "17.3.19"
+  resolved "https://registry.yarnpkg.com/@syncfusion/ej2-svg-base/-/ej2-svg-base-17.3.19.tgz#b3bbc804e5b5cf02fb1220adb8598241e19f6d29"
+  integrity sha512-H6fWGvvkiAkCOhX4X5RWplJkimDFIiYwK8kOzupLVbLVAyR2f41VOTPtMDaOcp/jaram+9gJ/VLJYVKQAisu9Q==
+  dependencies:
+    "@syncfusion/ej2-base" "~17.3.19"
+
 "@types/babel__core@^7.1.0":
   version "7.1.3"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.3.tgz#e441ea7df63cd080dfcd02ab199e6d16a735fc30"

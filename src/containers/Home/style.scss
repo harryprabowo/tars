@@ -1,0 +1,26 @@
+#Home {
+    padding: 1em;
+
+    button {
+        color: white;
+
+        &:active {
+            color: grey;
+        }
+    }
+
+    .has-button {
+        writing-mode: vertical-rl;
+    }
+
+    .card {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+.topbar {
+    .col {
+        margin: 1em;
+    }
+}

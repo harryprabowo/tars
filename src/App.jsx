@@ -45,6 +45,7 @@ const App = () => {
 
   return (
     <Router>
+      <Navbar links={links} />
       <main id="App">
         <Switch>
           <Route path="/home" component={withRouter(props => (
@@ -63,7 +64,6 @@ const App = () => {
         </Switch>
       </main>
 
-      <Navbar links={links} />
     </Router>
   )
 }

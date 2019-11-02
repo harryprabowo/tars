@@ -1,5 +1,38 @@
 main#App {
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
   background-image: linear-gradient(to top right, rgb(8, 8, 8), rgb(31, 44, 74));
   text-align: center;
+  color: white;
+}
+
+.navbar {
+    position: absolute;
+    bottom: 0;
+}
+
+.toast {
+  text-align: initial;
+  background-color:yellow;
+  transition: 0.2s;
+
+  button span {
+    color: grey;
+  }
+}
+
+.e-control {
+  rect {
+    fill: none;
+  }
+  
+
+  text {
+    fill: white;
+  }
+}
+
+#gauge-measuretext {
+  display: none;
 }
