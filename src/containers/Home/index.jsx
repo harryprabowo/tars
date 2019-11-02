@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import {
     Row,
-    Col, 
+    Col,
     Image,
     Button,
     Toast
@@ -11,15 +11,23 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faBell,
-    faCar,
 } from '@fortawesome/free-solid-svg-icons';
+import { 
+    CircularGaugeComponent,
+    AxesDirective,
+    AxisDirective,
+    PointersDirective,
+    PointerDirective,
+    Inject
+} from '@syncfusion/ej2-react-circulargauge';
 
 import Logo from '../../assets/img/toyota.png'
 
 import './style.scss'
+// import "../node_modules/@syncfusion/ej2-react-buttons/styles/material.css";
 
 const Home = props => {
-    const [showToast, setShowToast] = useState(true);
+    const [showToast, setShowToast] = useState(false);
 
     const toggleShowToast = () => {
         setShowToast(false);
@@ -30,10 +38,12 @@ const Home = props => {
             {/* HEADER STARTS HERE */}
             <Row className="topbar">
                 <Col xs={3}>
-                    <Image src={Logo} fluid/>
+                    <Image src={Logo} fluid />
                 </Col>
-                <Col xs={6}>asdasdasd</Col>
-                <Col xs={3} className="has-button">
+                <Col xs={{ span: 4, offset: 1 }}>
+                    sdsdf
+                </Col>
+                <Col xs={{ span: 3, offset: 1 }} className="has-button">
                     <Button variant="link">
                         <FontAwesomeIcon size="2x" icon={faBell} />
                     </Button>
@@ -52,9 +62,36 @@ const Home = props => {
                 </Col>
             </Row>
             <Row>
-                <Col>asdasdasd</Col>
-                <Col>asdasdasd</Col>
-                <Col>asdasdasd</Col>
+                <Col style={{ padding: 0 }}>
+                    <CircularGaugeComponent 
+                        id='circulargauge-1'
+                        title='Fuel & Temperature'
+                        height='200'
+                    >
+                        <AxesDirective>
+                            <AxisDirective>
+                                <PointersDirective>
+                                    <PointerDirective value={35}></PointerDirective>
+                                </PointersDirective>
+                            </AxisDirective>
+                        </AxesDirective>
+                    </CircularGaugeComponent>
+                </Col>
+                <Col style={{ padding: 0 }}>
+                    <CircularGaugeComponent
+                        id='circulargauge-2'
+                        title='Distance to Next Service'
+                        height='200'
+                    >
+                        <AxesDirective>
+                            <AxisDirective>
+                                <PointersDirective>
+                                    <PointerDirective value={35}></PointerDirective>
+                                </PointersDirective>
+                            </AxisDirective>
+                        </AxesDirective>
+                    </CircularGaugeComponent>
+                </Col>
             </Row>
         </div>
     )

@@ -4,6 +4,7 @@ main#App {
   overflow: hidden;
   background-image: linear-gradient(to top right, rgb(8, 8, 8), rgb(31, 44, 74));
   text-align: center;
+  color: white;
 }
 
 .navbar {
@@ -14,8 +15,20 @@ main#App {
 .toast {
   text-align: initial;
   background-color:yellow;
+  transition: 0.2s;
 
   button span {
     color: grey;
+  }
+}
+
+.e-control {
+  rect {
+    fill: none;
+  }
+  
+
+  text {
+    fill: white;
   }
 }
