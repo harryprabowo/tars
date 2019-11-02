@@ -1,5 +1,9 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { 
+    Row,
+    Col,
+    Image
+} from 'react-bootstrap';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -23,9 +27,11 @@ const CarCard = props => {
     return (
         <div className="card">
             <Row>
-                <Col xs={4}>
-                    <img src={pictureUrl} alt='Car preview' />
+                <Col>
+                    <Image src={pictureUrl} alt='Car preview' style={{width:'100%'}}/>
                 </Col>
+            </Row>
+            <Row>
                 <Col className="description" xs={8}>
                     <div className="car-name">{name}</div>
                     <div className={`car-score`}>Overall score: {<span className={scoreColor(overallScore)}>{overallScore}</span>}/100</div>

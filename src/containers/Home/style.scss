@@ -9,10 +9,6 @@
         }
     }
 
-    .has-button {
-        writing-mode: vertical-rl;
-    }
-
     .card {
         margin: 0;
         width: 100%;
@@ -32,3 +28,7 @@ label {
     font-weight:bolder;
     margin-right: 1em;
 }
+
+.has-button {
+        writing-mode: vertical-rl;
+    }

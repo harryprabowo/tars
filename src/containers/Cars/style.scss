@@ -2,7 +2,6 @@
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  padding-right: 20px;
 
   .card {
     display: inline-block;
@@ -14,5 +13,19 @@
   
   .horizontal-cardlist {
     height: 100%;
+  }
+
+  .topbar {
+    padding: 1em;
+  }
+
+  .card {
+    background-color: transparent;
+    width: 100vw;
+    // height: 92vh;
+    // opacity: 0.8;
+    border-radius: 0;
+    padding: 1em;
+    // margin: 28px 40px 0px 28px;
   }
 }

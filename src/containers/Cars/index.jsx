@@ -1,6 +1,23 @@
 import React, { useState } from 'react';
 import Map from 'pigeon-maps';
 
+import {
+    Row,
+    Col,
+    Image,
+    Button,
+    Toast,
+    Badge
+} from 'react-bootstrap'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faBell,
+    faChevronCircleDown
+} from '@fortawesome/free-solid-svg-icons';
+
+import Logo from '../../assets/img/toyota.png'
+
 import CarCard from '../../components/CarCard';
 import './style.scss';
 
@@ -74,7 +91,32 @@ const Cars = () => {
 
     return (
         <div id="Cars">
-            <Map center={[-6.2088, 106.8267]} zoom={12} height={240} />
+            {/* HEADER STARTS HERE */}
+            <Row className="topbar">
+                <Col xs={3}>
+                    <Image src={Logo} fluid />
+                </Col>
+                <Col xs={7} style={{ alignSelf: 'center' }}>
+                    {/* <Button size="sm" variant="dark">
+                        <Badge variant="info" style={{ verticalAlign: "sub"}}>9,999</Badge>
+                        <span className="sr-only">unread messages</span>
+                    </Button> */}
+                    <label style={{ marginRight: 0 }}>
+                        <Badge variant="dark" style={{ fontSize: '12pt', marginRight: '1em' }}>B 1 RI</Badge>
+                        <br />
+                        <span style={{ marginRight: '1em', fontWeight: 100, color: 'rgba(255,255,255,0.8)' }}>TOYOTA SUPRA</span>
+                    </label>
+                    <FontAwesomeIcon icon={faChevronCircleDown} style={{ opacity: '0.3', verticalAlign: 'super' }} />
+                </Col>
+                <Col xs={2} className="has-button">
+                    <Button variant="link">
+                        <FontAwesomeIcon size="2x" icon={faBell} style={{ color: 'white' }} />
+                    </Button>
+                </Col>
+            </Row>
+            {/* HEADER ENDS HERE */}
+
+            {/* <Map center={[-6.2088, 106.8267]} zoom={12} height={240} /> */}
             <div className='scroll-wrapper horizontal-cardlist'>
                 {cars.map(car => <CarCard {...car} toggleLock={toggleLock} />)}
             </div>

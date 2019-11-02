@@ -10,16 +10,6 @@
     color: greenyellow;
 }
 
-.card {
-    background-color: black;
-    width: 90%;
-    // opacity: 0.8;
-    // border-radius: 10px;
-    padding: 1em;
-    margin: 1em 5%;
-    // margin: 28px 40px 0px 28px;
-}
-
 .car-name {
     font-weight: bold;
 }
@@ -48,7 +38,7 @@
     object-fit: cover;
     width: 80px;
     height: 80px;
-    border-radius: 8px;
+    // border-radius: 8px;
     margin: 8px;
 }
 
@@ -58,6 +48,7 @@
     height: 60px;
     border-radius: 30px;
     border: 0px;
+    transition: 0.2s;
 
     &:focus {
         outline: none;
@@ -71,7 +62,7 @@
 
     position: absolute;
     top: 15px;
-    right: -30px;
+    right: 1em;
 }
 
 .locked {
