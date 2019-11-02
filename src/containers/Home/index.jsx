@@ -5,12 +5,14 @@ import {
     Col,
     Image,
     Button,
-    Toast
+    Toast,
+    Badge
 } from 'react-bootstrap'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faBell,
+    faAngleRight
 } from '@fortawesome/free-solid-svg-icons';
 import { 
     CircularGaugeComponent,
@@ -18,7 +20,6 @@ import {
     AxisDirective,
     PointersDirective,
     PointerDirective,
-    Inject
 } from '@syncfusion/ej2-react-circulargauge';
 
 import Logo from '../../assets/img/toyota.png'
@@ -40,12 +41,15 @@ const Home = props => {
                 <Col xs={3}>
                     <Image src={Logo} fluid />
                 </Col>
-                <Col xs={{ span: 4, offset: 1 }}>
-                    sdsdf
+                <Col xs={6} style={{alignSelf: 'center'}}>
+                    <Button size="sm" variant="dark">
+                        <Badge variant="info" style={{ verticalAlign: "sub"}}>9,999</Badge>
+                        <span className="sr-only">unread messages</span>
+                    </Button>
                 </Col>
-                <Col xs={{ span: 3, offset: 1 }} className="has-button">
+                <Col xs={3} className="has-button">
                     <Button variant="link">
-                        <FontAwesomeIcon size="2x" icon={faBell} />
+                        <FontAwesomeIcon size="2x" icon={faBell} style={{color: 'white'}} />
                     </Button>
                 </Col>
             </Row>
@@ -61,7 +65,8 @@ const Home = props => {
                     </Toast>
                 </Col>
             </Row>
-            <Row>
+            
+            <Row style={{margin: '0.5em 0', padding: '0.75em 0'}}>
                 <Col style={{ padding: 0 }}>
                     <CircularGaugeComponent 
                         id='circulargauge-1'
@@ -93,16 +98,15 @@ const Home = props => {
                     </CircularGaugeComponent>
                 </Col>
             </Row>
-            <br/>
-            <Row>
+            <Row style={{margin: '0.5em 0'}}>
                 <Col style={{ textAlign: 'left' }}>
-                    asdasd
+                    <label>CAR DETAIL</label>
                 </Col>
                 <Col style={{ textAlign: 'right' }}>
-                    asdasd
+                    <Button variant="link" style={{padding: 0}}>View more</Button>
                 </Col>
             </Row>
-            <br/>
+
             <section class="card">
                 <div class="card--content"></div>
                 <div class="card--content"></div>
@@ -115,6 +119,15 @@ const Home = props => {
                 <div class="card--content"></div>
                 <div class="card--content"></div>
             </section>
+
+            <Row style={{ margin: '2em 0', color: "grey" }}>
+                <Col>
+                    <Button variant="dark" block>ASdasd</Button>
+                </Col>
+                <Col>
+                    <Button variant="dark" block>ASdasd</Button>
+                </Col>
+            </Row>
         </div>
     )
 }
