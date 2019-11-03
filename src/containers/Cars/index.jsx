@@ -35,6 +35,8 @@ const carsDummy = [
                 datetime: '2 November 2019, 19.40 - 20.08',
                 fuel: '13.8 L/km',
                 occassion: 'Personal',
+                ecodriving: true,
+                enginesafe: true,
             },
             {
                 from: 'Pancoran Riverside Apartment',
@@ -43,6 +45,8 @@ const carsDummy = [
                 datetime: '2 November 2019, 18.01 - 18.34',
                 fuel: '24.5 L/km',
                 occassion: 'Personal',
+                ecodriving: false,
+                enginesafe: true,
             }
         ],
     },

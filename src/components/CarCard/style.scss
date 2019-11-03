@@ -20,6 +20,7 @@
 }
 
 .car-detail {
+    padding-bottom: 1em;
     background-color: #fff;
     color: black;
 }
@@ -87,4 +88,14 @@
     &:active {
         border-color: #6c841e;
     }
+}
+
+.history-score {
+    float: right;
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+.badge {
+    margin-right: 15px;
 }

@@ -10,7 +10,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faLock,
     faUnlock,
-    faLongArrowAltRight
+    faLongArrowAltRight,
+    faLeaf,
+    faCogs,
 } from '@fortawesome/free-solid-svg-icons';
 
 import './style.scss';
@@ -77,6 +79,10 @@ const CarCard = props => {
                             <Row>
                                 <Col>{history.distance}</Col>
                                 <Col>{history.fuel}</Col>
+                            </Row>
+                            <Row className='history-score'>
+                                {history.ecodriving && <span className="badge"><FontAwesomeIcon size="lg" icon={faLeaf} /></span>}
+                                {history.enginesafe && <span className="badge"><FontAwesomeIcon size="lg" icon={faCogs} /></span>}
                             </Row>
                         </div>
                     )}
